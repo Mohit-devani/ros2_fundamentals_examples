@@ -21,9 +21,10 @@ Date: Feb 3 2026
 import rclpy #import ros2 client library for python 
 from rclpy.node import Node # Import the node class , used for creating nodes
 
+from std_msgs import msg
 from std_msgs.msg import String #import string message type for ros2
 
-class minimalPyPublisher(Node):
+class MinimalPyPublisher(Node):
 
     """ create a minimal publisher node.
     
@@ -70,7 +71,7 @@ def main(args = None):
     rclpy.init(args = args)
 
     #create an instance of the minimal publisher node
-    minimal_Py_Publisher = minimalPyPublisher()
+    minimal_Py_Publisher = MinimalPyPublisher()
 
     rclpy.spin(minimal_Py_Publisher)
 
